@@ -7,6 +7,17 @@ const definition = {
     description: 'Weather station',
     icon: 'device_icons/meteojet.png',
     extend: [
+
+        // Low Power Mode control
+        binary({
+            name: 'low_power_mode',
+            valueOn: ['ON', 1, true],
+            valueOff: ['OFF', 0, false],
+            cluster: 0xFCBB,
+            attribute: {ID: 0, type: 0x10},
+            description: 'Low power mode',
+            access: 'STATE_SET',
+        }),
         battery(), 
         illuminance(), 
         temperature(), 
@@ -22,14 +33,35 @@ const definition = {
              scale: 100,
              access: "STATE_GET",
         }),
+        numeric({
+            name: 'wind_calibration',
+            cluster: 0xFCBB,
+            attribute: {ID: 1, type: 0x21},
+            description: 'Wind calibration factor',
+            scale: 100,
+            valueStep: 0.01,
+            valueMin: 0.01,
+            valueMax: 1.99,
+            access: 'STATE_SET',
+        }),
         binary({
             name: 'rain_drop',
             valueOn: ['ON', 1, true],
             valueOff: ['OFF', 0, false],
             cluster: 0xFCBA,
             attribute: {ID: 0, type: 0x10},
-            description: 'Raindrop detected',
+            description: 'Rain sensor is wet (rain detected)',
             access: 'STATE_GET'
+        }),
+        numeric({
+            name: 'rain_threshold',
+            cluster: 0xFCBB,
+            attribute: {ID: 3, type: 0x20}, //U8
+            description: 'Rain drop threshold for rain detection',
+            valueStep: 1,
+            valueMin: 1,
+            valueMax: 100,
+            access: 'STATE_SET',
         }),
         numeric({
             name: 'rain_intensity',
@@ -85,28 +117,7 @@ const definition = {
             scale: 100,
             access: 'STATE_GET'
         }),
-            // Low Power Mode control
-        binary({
-            name: 'low_power_mode',
-            valueOn: ['ON', 1, true],
-            valueOff: ['OFF', 0, false],
-            cluster: 0xFCBB,
-            attribute: {ID: 0, type: 0x10},
-            description: 'Low power mode',
-            access: 'STATE_SET',
-        }),
         numeric({
-            name: 'wind_calibration',
-            cluster: 0xFCBB,
-            attribute: {ID: 1, type: 0x21},
-            description: 'Wind calibration factor',
-            scale: 100,
-            valueStep: 0.01,
-            valueMin: 0.01,
-            valueMax: 1.99,
-            access: 'STATE_SET',
-        }),
-         numeric({
             name: 'rain_calibration',
             cluster: 0xFCBB,
             attribute: {ID: 2, type: 0x21},

@@ -41,7 +41,7 @@ MeteoJet is a battery-powered weather station that transmits data using the **Zi
 
 <div align="center">
 
-![MeteoJet Image 1](images/components/img1.png)
+![MeteoJet Image 1](images/img1.jpg)
 
 </div>
 

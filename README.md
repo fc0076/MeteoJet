@@ -6,7 +6,7 @@
 
 **A battery-powered 3D-printed Zigbee weather station, fully compatible with Zigbee2MQTT and Home Assistant.**
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 [![Zigbee2MQTT](https://img.shields.io/badge/Zigbee2MQTT-compatible-green)](https://www.zigbee2mqtt.io/)
 [![Home Assistant](https://img.shields.io/badge/Home%20Assistant-compatible-blue)](https://www.home-assistant.io/)
 [![3D Printed](https://img.shields.io/badge/3D%20Printed-yes-orange)](https://github.com/fc0076/MeteoJet/tree/main/3D_parts)
@@ -35,7 +35,7 @@ MeteoJet is a battery-powered weather station that transmits data using the **Zi
 
 <div align="center">
 
-https://github.com/fc0076/MeteoJet/raw/main/images/MeteoJet.mov
+[![MeteoJet Demo](https://img.youtube.com/vi/s1psmz0XHgw/0.jpg)](https://www.youtube.com/watch?v=s1psmz0XHgw)
 
 </div>
 
@@ -68,7 +68,7 @@ MeteoJet is **quick to alert** in case of rain or wind — generally within abou
 | Component | Description | Image |
 |-----------|-------------|-------|
 | **Mini ESP32-H2** | Development board with Zigbee radio — the heart of the system | ![ESP32-H2](images/components/esp32-h2.jpg) |
-| **BME-280 3.3V** | Temperature, humidity and barometric pressure sensor. ⚠️ Do NOT buy BMP-280 — very similar but lacks the humidity sensor | ![BME-280](images/components/bmp-280.jpg) |
+| **BME-280 3.3V** | Temperature, humidity and barometric pressure sensor. ⚠️ Do NOT buy BMP-280 — very similar but lacks the humidity sensor | ![BME-280](images/components/bme-280.jpg) |
 | **BH1750** | Ambient light (lux) sensor. Get the one with a **white cover** to protect it from weather | ![BH1750](images/components/BH1750.jpg) |
 | **CN3791 6V** | Solar battery charger board | ![CN3791](images/components/cn3791.jpg) |
 | **Solar Panel 80×45mm** | Solar panel — must be exactly 80×45mm to fit the 3D-printed housing | ![Solar Panel](images/components/solar_panel_80x45.jpg) |
@@ -318,9 +318,21 @@ Contributions, issues and feature requests are welcome! Feel free to:
 
 ## License
 
-This project is released under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)**.
 
-Free to use, modify and distribute for personal and commercial purposes with attribution.
+[![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
+
+You are free to:
+- ✅ **Build** MeteoJet for personal, non-commercial use
+- ✅ **Share** and adapt the project, as long as you credit the original author
+- ✅ **Modify** and redistribute, under the same license
+
+You are **not** allowed to:
+- ❌ **Sell** MeteoJet or any derivative of it without explicit written permission from the author
+- ❌ **Use** this project or any part of it for commercial purposes
+- ❌ **Relicense** under more permissive terms
+
+For commercial licensing inquiries, please open an [issue](https://github.com/fc0076/MeteoJet/issues) or contact the author directly.
 
 ---
 

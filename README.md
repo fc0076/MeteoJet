@@ -39,6 +39,12 @@ MeteoJet is a battery-powered weather station that transmits data using the **Zi
 
 </div>
 
+<div align="center">
+
+![MeteoJet Image 1](images/components/img1.png)
+
+</div>
+
 ### Features
 
 - 🌬️ **Anemometer** — measures average wind speed and gusts
@@ -155,6 +161,12 @@ MeteoJet is made up of multiple parts assembled together — some with glue, oth
 <div align="center">
 
 ![Assembly Overview](images/assembly/assembly.png)
+
+</div>
+
+<div align="center">
+
+![Section Overview](images/assembly/section.png)
 
 </div>
 
